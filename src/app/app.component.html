@@ -1,3 +1,12 @@
 Total days of the year: {{totalDays}} <br>
-Total weeks of the year: {{totalWeeks}}
+Total weeks of the year: {{weeks.length}}
+
+
+<div *ngIf="weeks.length>0" class="wrapper">
+   <div class="week" *ngFor="let week of weeks">
+    <div class="day" *ngFor="let day of week.days">
+       
+    </div>
+   </div>
+</div>
 <router-outlet></router-outlet>
